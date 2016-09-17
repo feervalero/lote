@@ -1,0 +1,325 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Programacion WEB Equipo 13">
+  <title>Programacion WEB Equipo 13</title>
+  <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+  <!-- Place favicon.ico in the `app/` directory -->
+
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#2E3AA1">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Tile color for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PSK">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+
+  <!-- Because this project uses vulcanize this should be your only html import
+       in this file. All other imports should go in elements.html -->
+  <link rel="import" href="elements/elements.html">
+
+  <!-- For shared styles, shared-styles.html import in elements.html -->
+  <style is="custom-style" include="shared-styles"></style>
+</head>
+
+<body unresolved>
+  <!-- build:remove -->
+  <span id="browser-sync-binding"></span>
+  <!-- endbuild -->
+
+  <template is="dom-bind" id="app">
+
+    <paper-drawer-panel id="paperDrawerPanel">
+      <!-- Drawer Scroll Header Panel -->
+      <paper-scroll-header-panel drawer fixed>
+
+        <!-- Drawer Toolbar -->
+        <paper-toolbar id="drawerToolbar">
+          <span class="menu-name">Practicas</span>
+        </paper-toolbar>
+
+        <!-- Drawer Content -->
+        <paper-menu class="app-menu" attr-for-selected="data-route" selected="[[route]]">
+          <a data-route="home" href="{{baseUrl}}">
+            <iron-icon icon="home"></iron-icon>
+            <span>Home</span>
+          </a>
+          <!--
+          <a data-route="users" href="{{baseUrl}}users">
+            <iron-icon icon="info"></iron-icon>
+            <span>Users</span>
+          </a>
+
+          <a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Contact</span>
+          </a>
+           -->
+           <a data-route="practica-1" href="{{baseurl}}practica-1">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 1</span>
+          </a>
+           <a data-route="practica-2" href="{{baseurl}}practica-2">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 2</span>
+          </a>
+           <a data-route="practica-3" href="{{baseurl}}practica-3">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 3</span>
+          </a>
+           <a data-route="practica-4" href="{{baseurl}}practica-4">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 4</span>
+          </a>
+           <a data-route="practica-5" href="{{baseurl}}practica-5">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 5</span>
+          </a>
+           <a data-route="practica-6" href="{{baseurl}}practica-6">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 6</span>
+          </a>
+           <a data-route="practica-7" href="{{baseurl}}practica-7">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 7</span>
+          </a>
+           <a data-route="practica-8" href="{{baseurl}}practica-8">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 8</span>
+          </a>
+           <a data-route="practica-9" href="{{baseurl}}practica-9">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 9</span>
+          </a>
+           <a data-route="practica-10" href="{{baseurl}}practica-10">
+            <iron-icon icon="radio-button-checked"></iron-icon>
+            <span>Practica 10</span>
+          </a>
+
+
+        </paper-menu>
+      </paper-scroll-header-panel>
+
+      <!-- Main Area -->
+      <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+        <!-- Main Toolbar -->
+        <paper-toolbar id="mainToolbar" class="tall">
+          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
+          <span class="space"></span>
+
+          <!-- Toolbar icons -->
+
+          <!-- Application name -->
+          <div class="middle middle-container">
+            <div class="app-name">Laboratorio de programacion web</div>
+          </div>
+
+        </paper-toolbar>
+
+        <!-- Main Content -->
+        <div class="content">
+          <iron-pages attr-for-selected="data-route" selected="{{route}}">
+            
+            <section data-route="home" tabindex="-1">
+              <paper-material elevation="1">
+                <h1 class="paper-title">Equipo 13</h1>
+                <li>Fernando Valero Niño 1496528</li>
+                <li>Jesús Fernando Reyes Flores 1659118</li>
+                <li>Olivia Karyna Vega Alcázar 0820278</li>
+                <li>Eduardo javier Álvarez Aguilar 1376616</li>
+              </paper-material>
+              <span class="space"></span>
+              <div id="infoD" class="vertical layout wrap" width="100%">
+                 <paper-card  image="" elevation="1" animated-shadow="false">
+                   <div class="card-content"><img src="images/fime.png" height="100px" alt=""></div>
+                 </paper-card>
+                 <paper-card  image="" elevation="1" animated-shadow="false">
+                   <div class="card-content"><img src="images/microsoft.png" alt=""></div>
+                   
+                 </paper-card>
+                 <paper-card image="" elevation="1" animated-shadow="false">
+                   <div class="card-content"><img src="images/facebook.png" height="50px" alt=""></div>
+                   
+                 </paper-card>
+                 <paper-card elevation="1" animated-shadow="false">
+                   <div class="card-content"><img src="images/uanl.gif" height="100px" alt=""></div>
+                 </paper-card>
+              </div>
+            </section>
+            <section data-route="practica-1" tabindex="'1">
+              <h1 class="header">Practica 1 - Conceptos de una pagina web</h1>
+              <br><br><br>
+               <h1 class="title">DIRECCION IP</h1>
+              <p>Las direcciones IP son números binarios de 32 bits que son usados como direcciones en los protocolos IPv4. Están compuestos por cuatro números enteros (4 bytes) entre 0 y 255, escritos en el formato xxx.xxx.xxx.xxx. Los equipos en una red usan estas direcciones para comunicarse, de manera que cada equipo tiene una dirección IP exclusiva.</p>
+
+              <p>Los números de la izquierda indican la red y se les denomina netID (identificador de red). Los números de la derecha indican los equipos dentro de esta red y se les denomina host-ID (identificador de host).</p>
+
+               <h1 class="title">TIPOS DE DIRECCIONES IP</h1>
+              <p>Direcciones IP públicas.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;Constituyen el espacio de direcciones de Internet. Estas son asignadas para ser globalmente únicas. El organismo encargado de asignar estas direcciones es el ICANN.</p>
+              <p>Direcciones IP privadas </p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;Reservados para la operación de redes privadas. Cualquier organización puede usar estas direcciones IP en sus redes sin la necesidad de solicitarlo a un registro de internet.</p>
+              <p>Direcciones IP especiales y reservadas.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;Reservados para aplicaciones como el multicasting.</p>
+
+               <h1 class="title">MAC ADDRESS</h1>
+              <p>Siglas del inglés Media Access Control. Es una dirección que usualmente está compuesta por números y letras asignado a los equipos que forman parte de una red, que es único e identifica su lugar dentro de la red. El comité de IEEE asigna bloques de direcciones a los fabricantes de tarjetas de red. De esta forma se asegura que no existan dos tarjetas de red con el mismo Mac address.</p>
+
+               <h1 class="title">ISP</h1>
+              <p>Internet Service Provider. Proveedor de Servicio Internet. Empresa que provee la conexión de computadoras a Internet, ya sea por líneas dedicadas broadband o dial-up.</p>
+
+               <h1 class="title">PUERTOS MAS CONOCIDOS</h1>
+              <p>• Puerto Físico. Se entiende como un "conector o toma en un dispositivo de red en el cual el medio se conecta con un host o con otro dispositivo de red</p>
+              <p>• Puerto Lógico. Son lugares de conexión lógica y concretamente, utilizando el protocolo de Internet, la forma en que un programa cliente especifica un programa servidor determinado en una computadora en una red, o dicho de otra manera, son puntos de acceso entre equipos para el uso de servicios y flujo de datos entre ellos.</p>
+
+
+               <h1 class="title">PROTOCOLOS TCP/IP</h1>
+              <p>Es un conjunto de protocolos.  La sigla TCP/IP significa "Protocolo de control de transmisión/Protocolo de Internet" y se pronuncia "T-C-P-I-P". Proviene de los nombres de dos protocolos importantes del conjunto de protocolos, es decir, del protocolo TCP y del protocolo IP.</p>
+              <p>Independientemente del sistema operativo, el sistema de protocolos TCP/IP se ha dividido en diversos módulos. Cada uno de éstos realiza una tarea específica. Además, estos módulos realizan sus tareas uno después del otro en un orden específico, es decir que existe un sistema estratificado. Ésta es la razón por la cual se habla de modelo de capas.</p>
+              <p>El término capa se utiliza para reflejar el hecho de que los datos que viajan por la red atraviesan distintos niveles de protocolos. Por lo tanto, cada capa procesa sucesivamente los datos (paquetes de información) que circulan por la red, les agrega un elemento de información (llamado encabezado) y los envía a la capa siguiente.</p>
+
+               <h1 class="title">REDIRECCIONAMIENTO DE PUERTOS</h1>
+              <p>A veces llamado tunelado de puertos, es la acción de redirigir un puerto de red de un nodo de red a otro. Esta técnica puede permitir que un usuario externo tenga acceso a un puerto en una dirección IP privada (dentro de una LAN) desde el exterior vía un router con NAT activado.</p>
+
+               <h1 class="title">SERVIDOR DE PAGINAS WEB</h1>
+              <p>Un servidor web o servidor HTTP es un programa informático que procesa una aplicación del lado del servidor, realizando conexiones bidireccionales y/o unidireccionales y síncronas o asíncronas con el cliente y generando o cediendo una respuesta en cualquier lenguaje o Aplicación del lado del cliente.</p>
+
+               <h1 class="title">PUERTA DE ENLACE</h1>
+              <p>Es el dispositivo o la computadora que sirve como enlace entre dos redes informáticas, es decir, es aquel dispositivo que conecta y dirige el tráfico de datos entre dos o más redes.</p>
+
+               <h1 class="title">DIRRECCION IP PUBLICA</h1>
+              <p>Son visibles en todo Internet. Un ordenador con una IP pública es accesible (visible) desde cualquier otro ordenador conectado a Internet. Para conectarse a Internet es necesario tener una dirección IP pública.</p>
+
+               <h1 class="title">DIRRECCION IP PRIVADA</h1>
+              <p>Son visibles únicamente por otros hosts de su propia red o de otras redes privadas interconectadas por routers. Se utilizan en las empresas para los puestos de trabajo. Los ordenadores con direcciones IP privadas pueden salir a Internet por medio de un router (o proxy) que tenga una IP pública. Sin embargo, desde Internet no se puede acceder a ordenadores con direcciones IP privadas.</p>
+
+               <h1 class="title">DNS</h1>
+              <p>Servidor de Nombres de Dominio. Servidor automatizado utilizado en el internet cuya tares es convertir nombres fáciles de entender (como www.panamacom.com) a direcciones numéricas de IP.</p>
+
+               <h1 class="title">FIREWALL</h1>
+              <p>Combinación de hardware y software la cual separa una red de área local (LAN) en dos o más partes con propósitos de seguridad. Su objetivo básico es asegurar que todas las comunicaciones entre dicha red e Internet se realicen conforme a las políticas de seguridad de la organización que lo instala. Además, estos sistemas suelen incorporar elementos de privacidad, autentificación, etc.</p>
+
+               <h1 class="title">WEB HOSTING</h1>
+              <p>El hosting es un servicio al que puedes asociar tu dominio. Si tienes un dominio, lo más probable es que lo quieras para tener una página web, o para tener cuentas de correo bajo tu propio dominio. El hosting es exactamente eso, son esos servicios que vas a necesitar si quieres tener tu web y tu correo.</p>
+
+
+
+
+
+               <h1 class="title">DOMINIO</h1>
+              <p>Un dominio es el nombre que identifica un sitio web. Cada dominio tiene que ser único en Internet. Por ejemplo, "www.masadelante.com" es el nombre de dominio de la página web de Mas adelante. Un solo servidor web puede servir múltiples página web de múltiples dominios, pero un dominio sólo puede apuntar a un servidor. </p>
+
+              <p>Un dominio se compone normalmente de tres partes: en www.masadelante.com, las tres uves dobles (www), el nombre de la organización (mas adelante) y el tipo de organización (com).</p>
+
+               <h1 class="title">FTP</h1>
+              <p>File Transfer Protocol. Protocolo de transferencia de archivos. Por medio de programas que usan este protocolo, se permite la conexión entre dos computadoras y se pueden cargar y descargar archivos entre el cliente y el host (servidor).</p>
+
+               <h1 class="title">HTML</h1>
+              <p>Es un lenguaje de programación que se utiliza para el desarrollo de páginas de Internet. Se trata de la sigla que corresponde a HyperText Markup Language, es decir, Lenguaje de Marcas de Hipertexto, que podría ser traducido como Lenguaje de Formato de Documentos para Hipertexto.</p>
+
+               <h1 class="title">CSS</h1>
+              <p>Es un lenguaje de hojas de estilos creado para controlar el aspecto o presentación de los documentos electrónicos definidos con HTML y XHTML. CSS es la mejor forma de separar los contenidos y su presentación y es imprescindible para crear páginas web complejas.</p>
+
+            </section>
+            <section data-route="practica-2" tabindex="'1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tab-index="-1">Practica 2</h1>
+              </paper-material>
+            </section>
+            <section data-route="practica-3" tabindex="'1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tab-index="-1">Practica 3</h1>
+              </paper-material>
+            </section>
+            <section data-route="practica-4" tabindex="'1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tab-index="-1">Practica 4</h1>
+              </paper-material>
+            </section>
+            <section data-route="practica-5" tabindex="'1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tab-index="-1">Practica 5</h1>
+              </paper-material>
+            </section>
+            <section data-route="practica-6" tabindex="'1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tab-index="-1">Practica 6</h1>
+              </paper-material>
+            </section>
+            <section data-route="practica-7" tabindex="'1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tab-index="-1">Practica 7</h1>
+              </paper-material>
+            </section>
+            <section data-route="practica-8" tabindex="'1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tab-index="-1">Practica 8</h1>
+              </paper-material>
+            </section>
+            <section data-route="practica-9" tabindex="'1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tab-index="-1">Practica 9</h1>
+              </paper-material>
+            </section>
+            <section data-route="practica-10" tabindex="'1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tab-index="-1">Practica 10</h1>
+              </paper-material>
+            </section>
+
+          </iron-pages>
+        </div>
+      </paper-scroll-header-panel>
+    </paper-drawer-panel>
+
+    <paper-toast id="toast">
+      <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+    </paper-toast>
+
+  </template>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="mystyles.css">
+  <!-- endbuild-->
+</body>
+
+</html>
